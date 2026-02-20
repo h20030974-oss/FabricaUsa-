@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المتجر | La FabricaUsa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">FABRICA<span>USA</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="shop.html" class="active">المتجر</a></li>
+            <li><a href="about.html">قصتنا</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+        <div class="cart-btn" onclick="toggleCart(true)">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount">0</span>
+        </div>
+    </div>
+</nav>
+
+<section class="nav-container" style="padding-top: 60px;">
+    <h1 style="font-size: 45px; font-weight: 800; color: var(--primary); margin-bottom: 10px;">تسوق الكل</h1>
+    <p style="color: var(--text-light); margin-bottom: 40px;">مجموعتنا الكاملة من أفضل المكملات الغذائية المختارة لأجلك.</p>
+    
+    <!-- شبكة المنتجات تظهر هنا تلقائياً -->
+    <div id="productsGrid" class="products-grid"></div>
+</section>
+
+<!-- Modal (نفس الكود لضمان عمل المودال في صفحة الشوب) -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="img-box"><img id="m-img" src=""></div>
+        <div class="modal-info">
+            <h2 id="m-name"></h2>
+            <p id="m-price" class="price" style="margin:20px 0"></p>
+            <p id="m-desc" style="color:var(--text-light); margin-bottom:30px"></p>
+            <div style="display:flex; align-items:center; gap:20px; margin-bottom:30px">
+                <button onclick="updateQty(-1)" class="btn-main" style="width:50px; margin:0">-</button>
+                <span id="qty" style="font-size:20px; font-weight:800">1</span>
+                <button onclick="updateQty(1)" class="btn-main" style="width:50px; margin:0">+</button>
+            </div>
+            <button class="btn-main" onclick="addToCart()">أضف إلى السلة</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Drawer (لضمان بقاء السلة معك في كل الصفحات) -->
+<div id="cartDrawer" class="cart-drawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px">
+        <h2>سلة التسوق</h2>
+        <i class="fas fa-times" onclick="toggleCart(false)" style="cursor:pointer; font-size:24px"></i>
+    </div>
+    <div id="cartItems" style="flex:1; overflow-y:auto"></div>
+    <div style="border-top:1px solid #eee; padding-top:20px">
+        <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-weight:800">
+            <span>الإجمالي:</span><span id="cartTotal">0 MAD</span>
+        </div>
+        <input type="text" id="uName" placeholder="الاسم الكامل" class="input-glass">
+        <input type="text" id="uCity" placeholder="المدينة" class="input-glass">
+        <button class="btn-main" onclick="checkout()">تأكيد الطلب (واتساب)</button>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

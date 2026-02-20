@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | La FabricaUsa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">FABRICA<span>USA</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="shop.html">المتجر</a></li>
+            <li><a href="about.html">قصتنا</a></li>
+            <li><a href="contact.html" class="active">تواصل معنا</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="nav-container" style="padding: 80px 20px; max-width: 700px; text-align: center;">
+    <h1 style="font-size: 40px; margin-bottom: 20px;">دعنا نتحدث</h1>
+    <p style="color: var(--text-light); margin-bottom: 40px;">فريقنا متاح دائماً لمساعدتك في اختيار المكمل الأنسب لأهدافك.</p>
+
+    <div style="background: white; padding: 40px; border-radius: 30px; box-shadow: var(--shadow);">
+        <form id="contactForm">
+            <input type="text" id="userName" placeholder="الاسم الكامل" class="input-glass">
+            <textarea id="userMsg" placeholder="رسالتك..." class="input-glass" style="height: 150px;"></textarea>
+            <button type="submit" class="btn-main">إرسال عبر الواتساب</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('userName').value;
+        const msg = document.getElementById('userMsg').value;
+        const text = `*رسالة تواصل من الموقع*%0A%0A*الاسم:* ${name}%0A*الرسالة:* ${msg}`;
+        window.open(`https://wa.me/212603852896?text=${text}`, '_blank');
+    });
+</script>
+<script src="main.js"></script>
+</body>
+</html>

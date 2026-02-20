@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La FabricaUsa | Next Gen Performance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">FABRICA<span>USA</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">الرئيسية</a></li>
+            <li><a href="shop.html">المتجر</a></li>
+            <li><a href="about.html">قصتنا</a></li>
+        </ul>
+        <div class="cart-btn" onclick="toggleCart(true)">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount">0</span>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="orb-container"></div>
+    <div class="hero-content">
+        <h1>أداء رياضي<br>من الجيل القادم.</h1>
+        <p style="color:var(--text-light); max-width:600px; margin:0 auto 40px">نحن نوفر لك أفضل المكملات الغذائية المختارة بعناية لتحقق أهدافك البدنية بأعلى كفاءة.</p>
+        <button class="btn-main" style="width:auto; padding:18px 50px" onclick="window.location.href='shop.html'">تسوق المنتجات</button>
+    </div>
+</header>
+
+<div class="section-title">الأكثر مبيعاً</div>
+<div id="productsGrid" class="products-grid"></div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="img-box"><img id="m-img" src=""></div>
+        <div class="modal-info">
+            <h2 id="m-name"></h2>
+            <p id="m-price" class="price" style="margin:20px 0"></p>
+            <p id="m-desc" style="color:var(--text-light); margin-bottom:30px"></p>
+            <div style="display:flex; align-items:center; gap:20px; margin-bottom:30px">
+                <button onclick="updateQty(-1)" class="btn-main" style="width:50px; margin:0">-</button>
+                <span id="qty" style="font-size:20px; font-weight:800">1</span>
+                <button onclick="updateQty(1)" class="btn-main" style="width:50px; margin:0">+</button>
+            </div>
+            <button class="btn-main" onclick="addToCart()">أضف إلى السلة</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Drawer -->
+<div id="cartDrawer" class="cart-drawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px">
+        <h2>سلة التسوق</h2>
+        <i class="fas fa-times" onclick="toggleCart(false)" style="cursor:pointer; font-size:24px"></i>
+    </div>
+    <div id="cartItems" style="flex:1; overflow-y:auto"></div>
+    <div style="border-top:1px solid #eee; padding-top:20px">
+        <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-weight:800">
+            <span>الإجمالي:</span><span id="cartTotal">0 MAD</span>
+        </div>
+        <input type="text" id="uName" placeholder="الاسم الكامل" class="input-glass">
+        <input type="text" id="uCity" placeholder="المدينة" class="input-glass">
+        <button class="btn-main" onclick="checkout()">تأكيد الطلب (واتساب)</button>
+    </div>
+</div>
+
+<footer style="padding:60px 20px; text-align:center; background:#fff; border-top:1px solid #eee; margin-top:100px">
+    <p>hamzakhalyfah223@gmail.com | 0603852896</p>
+    <div style="margin-top:20px">
+        <a href="https://www.instagram.com/lafabricausa" style="color:var(--primary); text-decoration:none">Instagram @lafabricausa</a>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
