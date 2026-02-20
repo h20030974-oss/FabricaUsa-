@@ -4,39 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قصتنا | La FabricaUsa</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="navbar">
     <div class="nav-container">
-        <a href="index.html" class="logo">FABRICA<span>USA</span></a>
+        <a href="index.html" class="logo">LA FABRICA<span>USA</span></a>
         <ul class="nav-links">
             <li><a href="index.html">الرئيسية</a></li>
             <li><a href="shop.html">المتجر</a></li>
             <li><a href="about.html" class="active">قصتنا</a></li>
             <li><a href="contact.html">تواصل معنا</a></li>
         </ul>
-        <div class="nav-right" onclick="toggleCart(true)" style="cursor:pointer">
-            <i class="fas fa-shopping-bag"></i><span id="cartCount" style="margin-right:10px">0</span>
+        <div class="nav-right">
+            <div class="cart-btn" onclick="toggleCart(true)">
+                <i class="fas fa-shopping-bag"></i><span id="cartCount">0</span>
+            </div>
         </div>
     </div>
 </nav>
 
 <section class="nav-container" style="padding: 120px 20px; text-align: center;">
-    <h1 style="font-family: 'Oswald'; font-style: italic; font-size: clamp(50px, 10vw, 120px); margin-bottom: 40px; color: #fff;">WE BELIEVE IN<br><span style="color:var(--primary)">PURE POWER.</span></h1>
-    <div style="max-width: 850px; margin: 0 auto; color: var(--text-dim); font-size: 20px; line-height: 2; text-align: justify; background: #161a1f; padding: 50px; border-radius: 40px; border: 1px solid rgba(255,255,255,0.03);">
-        <p>بدأت رحلة <b>La FabricaUsa</b> من فكرة بسيطة: أن كل رياضي طموح في المغرب يستحق الوصول إلى مكملات غذائية بجودة عالمية وبدون تنازلات. نحن لسنا مجرد متجر، نحن مختبرك الخاص لتطوير الأداء.</p>
+    <h1 style="font-family: 'Oswald'; font-style: italic; font-size: clamp(50px, 10vw, 120px); margin-bottom: 40px; color: #fff; line-height: 0.85;">WE BELIEVE IN<br><span style="color:var(--primary)">PURE POWER.</span></h1>
+    
+    <div style="max-width: 850px; margin: 60px auto; color: var(--text-dim); font-size: 20px; line-height: 2; text-align: justify; background: var(--card); padding: 50px; border-radius: 40px; border: 1px solid #1a1a1a;">
+        <p>بدأت رحلة <b>La FabricaUsa</b> من الرغبة في تغيير قواعد اللعبة. نحن لا نوفر مجرد مكملات غذائية، بل نقدم النخبة من المنتجات العالمية التي خضعت لأعلى معايير الفحص والجودة.</p>
         <br>
-        <p>نحرص في "لا فابريكا" على اختيار المنتجات الأكثر نقاءً وفاعلية، لضمان أن كل قطرة تعرق في النادي تقابلها نتائج حقيقية في المرآة. نحن نؤمن بأن الأبطال لا يولدون، بل يُصنعون بالانضباط والوقود الصحيح.</p>
+        <p>مهمتنا هي تمكين الرياضيين في المغرب من الوصول إلى "الوقود" الذي يستخدمه المحترفون عالمياً. نحن نؤمن بأن كل تمرين هو فرصة لتجاوز الذات، ونحن هنا لضمان أن جسمك يمتلك كل ما يحتاجه لتحقيق ذلك الانتقال.</p>
     </div>
 </section>
 
-<footer style="background:#050505; padding:80px 20px; text-align:center; border-top:1px solid #111">
-    <p style="color:var(--text-dim)">hamzakhalyfah223@gmail.com | 0603852896</p>
-    <div style="margin-top:20px"><a href="https://www.instagram.com/lafabricausa" style="color:var(--primary); text-decoration:none">Instagram @lafabricausa</a></div>
+<!-- الفوتر مكرر لضمان وصول العميل للمعلومات دائماً -->
+<footer class="footer-about">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <h2>LA FABRICA<span>USA</span></h2>
+            <p>الجودة الأصلية هي ما يميزنا. نحن شركاؤك في رحلة بناء القوة.</p>
+        </div>
+        <div class="footer-contact">
+            <h3 style="color: var(--accent);">روابط سريعة</h3>
+            <p><a href="index.html" style="color:#ccc; text-decoration:none">الرئيسية</a></p>
+            <p><a href="shop.html" style="color:#ccc; text-decoration:none">المتجر</a></p>
+            <p><a href="https://www.instagram.com/lafabricausa" style="color:var(--primary); text-decoration:none">Instagram @lafabricausa</a></p>
+        </div>
+    </div>
 </footer>
+
+<!-- سلة التسوق الجانبية ضرورية لضمان عمل السلة من أي صفحة -->
+<div id="cartDrawer" class="cart-drawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px">
+        <h2 style="font-size: 24px;">سلة التسوق</h2>
+        <i class="fas fa-times" onclick="toggleCart(false)" style="cursor:pointer; font-size:24px; color:var(--text-dim)"></i>
+    </div>
+    <div id="cartItems" style="flex:1; overflow-y:auto"></div>
+    <div style="border-top:1px solid #1a1a1a; padding-top:25px">
+        <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-weight:800; font-size:20px">
+            <span>المجموع:</span><span id="cartTotal" style="color:var(--accent)">0 MAD</span>
+        </div>
+        <input type="text" id="custName" placeholder="الاسم الكامل" class="nike-input">
+        <input type="text" id="custCity" placeholder="المدينة" class="nike-input">
+        <button class="btn-nike" onclick="sendOrder()">تأكيد الطلب</button>
+    </div>
+</div>
 
 <script src="main.js"></script>
 </body>

@@ -2,98 +2,150 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La FabricaUsa | Elite Performance</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- تأمين الروابط وجمالية المشاركة -->
+    <meta property="og:title" content="La FabricaUsa | Elite Performance">
+    <meta property="og:description" content="متجرك الأول للمكملات الرياضية الأصلية بأعلى جودة عالمية.">
+    <meta property="og:type" content="website">
+
+    <title>La FabricaUsa | المكملات الرياضية الاحترافية</title>
+    
+    <!-- الخطوط والأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- النافبار (Navigation) -->
 <nav class="navbar">
     <div class="nav-container">
-        <a href="index.html" class="logo">FABRICA<span>USA</span></a>
+        <a href="index.html" class="logo">LA FABRICA<span>USA</span></a>
+        
         <ul class="nav-links">
             <li><a href="index.html" class="active">الرئيسية</a></li>
             <li><a href="shop.html">المتجر</a></li>
             <li><a href="about.html">قصتنا</a></li>
             <li><a href="contact.html">تواصل معنا</a></li>
         </ul>
-        <div class="nav-right" style="display:flex; align-items:center; gap:20px">
-            <div class="search-box"><i class="fas fa-search"></i><input type="text" id="searchInput" placeholder="بحث..."></div>
-            <div class="cart-icon" onclick="toggleCart(true)">
-                <i class="fas fa-shopping-bag"></i><span id="cartCount">0</span>
+
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fas fa-search" style="color: #444;"></i>
+                <input type="text" id="searchInput" placeholder="بحث عن مكمل...">
+            </div>
+            <div class="cart-btn" onclick="toggleCart(true)">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cartCount">0</span>
             </div>
         </div>
     </div>
 </nav>
 
+<!-- قسم الهيرو (Hero Section) -->
 <header class="hero">
     <div class="hero-content">
-        <div class="hero-visual">
-            <div class="v-ring"></div><div class="v-ring"></div><div class="v-ring"></div>
-            <div class="v-core"></div>
+        <!-- المجسم الحركي (Performance Rings) -->
+        <div class="hero-visual" style="width: 200px; height: 200px; margin: 0 auto 30px; position: relative;">
+            <div class="v-ring" style="border-width: 1px;"></div>
+            <div class="v-ring" style="border-width: 1px;"></div>
+            <div class="v-ring" style="border-width: 1px;"></div>
+            <div class="v-core" style="width: 30px; height: 30px;"></div>
         </div>
+        
         <h1>BREAK YOUR<br><span style="color:var(--primary)">LIMITS.</span></h1>
-        <p>نحن لا نبيع المكملات، نحن نصنع الأبطال. مكملات غذائية أصلية بأعلى معايير الجودة العالمية.</p>
-        <button class="btn-primary" style="width:auto; padding:20px 60px" onclick="window.location.href='shop.html'">اكتشف المجموعات</button>
+        <p>نحن لا نبيع المكملات فحسب، نحن نوفر الوقود اللازم لتحقيق المستحيل. جودة عالمية، أداء مضمون.</p>
+        <button class="btn-nike" style="width:auto; padding:18px 60px; margin-top:30px" onclick="window.location.href='shop.html'">
+            اكتشف المجموعات
+        </button>
     </div>
 </header>
 
-<h2 class="section-title">الأكثر مبيعاً</h2>
-<div id="productsGrid" class="products-grid"></div>
+<!-- شبكة المنتجات (Products Grid) -->
+<div class="nav-container">
+    <h2 style="font-size: 40px; margin: 60px 0 20px;">الأكثر مبيعاً</h2>
+</div>
+<div id="productsGrid" class="products-grid">
+    <!-- المنتجات الستة ستظهر هنا بواسطة main.js -->
+</div>
 
-<!-- Footer Contact Section -->
-<footer style="background:#050505; padding:100px 20px; border-top:1px solid #111; margin-top:100px">
-    <div class="nav-container" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:50px">
-        <div>
-            <h2 class="logo">FABRICA<span>USA</span></h2>
-            <p style="color:var(--text-dim); margin-top:20px">الوجهة الأولى للرياضيين في المغرب لتحقيق أهدافهم البدنية.</p>
+<!-- الفوتر وقسم المعلومات (Footer About) -->
+<footer class="footer-about">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <h2>LA FABRICA<span>USA</span></h2>
+            <p>الوجهة الأولى للرياضيين في المغرب. نحن نؤمن بأن كل قطرة عرق تستحق الوقود الأفضل لتحويلها إلى نتائج ملموسة.</p>
+            <div style="display: flex; gap: 20px; margin-top: 30px;">
+                <a href="https://www.instagram.com/lafabricausa?igsh=dThtemowdTJobzh6" target="_blank" style="color: var(--primary); font-size: 26px;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </div>
-        <div>
-            <h4 style="margin-bottom:20px">تواصل معنا</h4>
-            <p style="color:var(--text-dim)">hamzakhalyfah223@gmail.com</p>
-            <p style="color:var(--text-dim)">0603852896</p>
-            <a href="https://www.instagram.com/lafabricausa" style="color:var(--primary); text-decoration:none; display:block; margin-top:10px">Instagram @lafabricausa</a>
+
+        <div class="footer-contact">
+            <h3 style="color: var(--accent); margin-bottom: 25px;">تواصل معنا</h3>
+            <p><i class="fas fa-phone" style="color: var(--primary); width: 25px;"></i> 0603852896</p>
+            <p><i class="fas fa-envelope" style="color: var(--primary); width: 25px;"></i> hamzakhalyfah223@gmail.com</p>
+            <p><i class="fas fa-truck" style="color: var(--primary); width: 25px;"></i> توصيل سريع لجميع المدن</p>
         </div>
+
+        <div class="footer-contact">
+            <h3 style="color: var(--accent); margin-bottom: 25px;">روابط سريعة</h3>
+            <p><a href="shop.html" style="color: #ccc; text-decoration: none;">المتجر الكامل</a></p>
+            <p><a href="about.html" style="color: #ccc; text-decoration: none;">من نحن</a></p>
+            <p><a href="contact.html" style="color: #ccc; text-decoration: none;">الدعم الفني</a></p>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 80px; color: #333; font-size: 13px; border-top: 1px solid #111; padding-top: 30px;">
+        &copy; 2024 La FabricaUsa. All Rights Reserved. Designed for Elite Athletes.
     </div>
 </footer>
 
-<!-- Cart Drawer -->
+<!-- سلة التسوق الجانبية (Cart Drawer) -->
 <div id="cartDrawer" class="cart-drawer">
-    <div style="display:flex; justify-content:space-between; margin-bottom:40px">
-        <h2>سلة التسوق</h2><i class="fas fa-times close-drawer" onclick="toggleCart(false)"></i>
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px">
+        <h2 style="font-size: 24px;">سلة التسوق</h2>
+        <i class="fas fa-times" onclick="toggleCart(false)" style="cursor:pointer; font-size:24px; color:var(--text-dim)"></i>
     </div>
-    <div id="cartItems" style="flex:1; overflow-y:auto"></div>
-    <div style="border-top:1px solid #222; padding-top:20px">
+    <div id="cartItems" style="flex:1; overflow-y:auto">
+        <!-- المشتريات تظهر هنا -->
+    </div>
+    <div style="border-top:1px solid #1a1a1a; padding-top:25px">
         <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-weight:800; font-size:20px">
-            <span>المجموع:</span><span id="cartTotal">0 MAD</span>
+            <span>المجموع:</span>
+            <span id="cartTotal" style="color:var(--accent)">0 MAD</span>
         </div>
         <input type="text" id="custName" placeholder="الاسم الكامل" class="nike-input">
         <input type="text" id="custCity" placeholder="المدينة" class="nike-input">
-        <button class="btn-primary" onclick="sendOrder()">تأكيد الطلب عبر واتساب</button>
+        <button class="btn-nike" onclick="sendOrder()">تأكيد الطلب عبر واتساب</button>
     </div>
 </div>
 
-<!-- Modal -->
+<!-- نافذة المنتج (Modal) -->
 <div id="productModal" class="modal">
     <div class="modal-content">
-        <span style="position:absolute; top:30px; right:30px; cursor:pointer; font-size:30px" onclick="closeModal()">&times;</span>
-        <div style="background:#1a1e24; border-radius:30px; padding:20px; display:flex; align-items:center; justify-content:center">
-            <img id="m-img" src="" style="width:90%; filter:drop-shadow(0 20px 40px #000)">
+        <span style="position:absolute; top:30px; right:30px; cursor:pointer; font-size:35px; color:var(--text-dim)" onclick="closeModal()">&times;</span>
+        <div style="background:#161616; border-radius:30px; display:flex; align-items:center; justify-content:center">
+            <img id="m-img" src="" style="width:85%; filter:drop-shadow(0 20px 40px #000)">
         </div>
         <div>
-            <h2 id="m-name" style="font-size:40px"></h2>
+            <h2 id="m-name" style="font-size:38px; line-height:1"></h2>
             <p id="m-price" class="price" style="font-size:35px; margin:20px 0"></p>
-            <p id="m-desc" style="color:var(--text-dim); margin-bottom:30px"></p>
-            <div style="display:flex; align-items:center; gap:20px; margin-bottom:30px">
-                <button onclick="updateQty(-1)" style="background:#1a1e24; color:#fff; border:none; padding:15px 25px; border-radius:15px; cursor:pointer">-</button>
-                <span id="modalQty" style="font-size:24px; font-weight:900">1</span>
-                <button onclick="updateQty(1)" style="background:#1a1e24; color:#fff; border:none; padding:15px 25px; border-radius:15px; cursor:pointer">+</button>
+            <p id="m-desc" style="color:var(--text-dim); margin-bottom:30px; font-size:16px"></p>
+            <div class="qty-controls">
+                <button class="qty-btn" onclick="updateQty(-1)">-</button>
+                <span id="modalQty" style="font-size:22px; font-weight:900; width:30px; text-align:center">1</span>
+                <button class="qty-btn" onclick="updateQty(1)">+</button>
             </div>
-            <button class="btn-primary" onclick="addToCart()">أضف للسلة</button>
+            <button class="btn-nike" onclick="addToCart()">أضف إلى السلة</button>
         </div>
     </div>
 </div>
+
+<!-- أيقونة واتساب العائمة -->
+<a href="https://wa.me/212603852896" class="whatsapp-float" target="_blank" style="text-decoration: none;">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 <script src="main.js"></script>
 </body>
