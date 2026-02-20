@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قصتنا | La FabricaUsa</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -17,26 +18,25 @@
             <li><a href="about.html" class="active">قصتنا</a></li>
             <li><a href="contact.html">تواصل معنا</a></li>
         </ul>
-        <div class="cart-btn" onclick="toggleCart(true)">
-            <span id="cartCount">0</span> <i class="fas fa-shopping-cart"></i>
+        <div class="nav-right" onclick="toggleCart(true)" style="cursor:pointer">
+            <i class="fas fa-shopping-bag"></i><span id="cartCount" style="margin-right:10px">0</span>
         </div>
     </div>
 </nav>
 
-<section class="nav-container" style="padding: 100px 20px; text-align: center;">
-    <h1 style="font-size: 60px; margin-bottom: 40px; color: var(--text);">نحن نؤمن <span style="color: var(--primary);">بالتغيير.</span></h1>
-    <div style="max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 30px; box-shadow: var(--shadow); line-height: 2; font-size: 18px; color: var(--text-light);">
-        تأسست <b>La FabricaUsa</b> لتوفير الحلول الغذائية الأكثر ذكاءً للرياضيين في المغرب. نحن لا نبيع مجرد منتجات، بل نقدم لك الأدوات التي تساعدك على بناء أفضل نسخة من نفسك. جودة عالمية، أداء مضمون، وشفافية تامة.
+<section class="nav-container" style="padding: 120px 20px; text-align: center;">
+    <h1 style="font-family: 'Oswald'; font-style: italic; font-size: clamp(50px, 10vw, 120px); margin-bottom: 40px; color: #fff;">WE BELIEVE IN<br><span style="color:var(--primary)">PURE POWER.</span></h1>
+    <div style="max-width: 850px; margin: 0 auto; color: var(--text-dim); font-size: 20px; line-height: 2; text-align: justify; background: #161a1f; padding: 50px; border-radius: 40px; border: 1px solid rgba(255,255,255,0.03);">
+        <p>بدأت رحلة <b>La FabricaUsa</b> من فكرة بسيطة: أن كل رياضي طموح في المغرب يستحق الوصول إلى مكملات غذائية بجودة عالمية وبدون تنازلات. نحن لسنا مجرد متجر، نحن مختبرك الخاص لتطوير الأداء.</p>
+        <br>
+        <p>نحرص في "لا فابريكا" على اختيار المنتجات الأكثر نقاءً وفاعلية، لضمان أن كل قطرة تعرق في النادي تقابلها نتائج حقيقية في المرآة. نحن نؤمن بأن الأبطال لا يولدون، بل يُصنعون بالانضباط والوقود الصحيح.</p>
     </div>
 </section>
 
-<!-- الفوتر -->
-<footer style="padding:60px 20px; text-align:center; margin-top:100px; border-top:1px solid #eee">
-    <p>hamzakhalyfah223@gmail.com | 0603852896</p>
+<footer style="background:#050505; padding:80px 20px; text-align:center; border-top:1px solid #111">
+    <p style="color:var(--text-dim)">hamzakhalyfah223@gmail.com | 0603852896</p>
+    <div style="margin-top:20px"><a href="https://www.instagram.com/lafabricausa" style="color:var(--primary); text-decoration:none">Instagram @lafabricausa</a></div>
 </footer>
-
-<!-- السلة الجانبية ضرورية لفتحها من أي مكان -->
-<div id="cartDrawer" class="cart-drawer">... (نفس كود السلة) ...</div>
 
 <script src="main.js"></script>
 </body>

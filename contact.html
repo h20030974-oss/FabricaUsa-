@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تواصل معنا | La FabricaUsa</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -21,16 +21,22 @@
     </div>
 </nav>
 
-<section class="nav-container" style="padding: 80px 20px; max-width: 700px; text-align: center;">
-    <h1 style="font-size: 40px; margin-bottom: 20px;">دعنا نتحدث</h1>
-    <p style="color: var(--text-light); margin-bottom: 40px;">فريقنا متاح دائماً لمساعدتك في اختيار المكمل الأنسب لأهدافك.</p>
+<section class="nav-container" style="padding: 100px 20px; max-width: 800px; text-align: center;">
+    <h1 style="font-family: 'Oswald'; font-style: italic; font-size: 50px; margin-bottom: 20px;">GET IN TOUCH.</h1>
+    <p style="color: var(--text-dim); margin-bottom: 50px; font-size: 18px;">فريقنا متاح دائماً للإجابة على استفساراتك حول المكملات والطلبات.</p>
 
-    <div style="background: white; padding: 40px; border-radius: 30px; box-shadow: var(--shadow);">
+    <div style="background: #161a1f; padding: 50px; border-radius: 40px; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,0.03);">
         <form id="contactForm">
-            <input type="text" id="userName" placeholder="الاسم الكامل" class="input-glass">
-            <textarea id="userMsg" placeholder="رسالتك..." class="input-glass" style="height: 150px;"></textarea>
-            <button type="submit" class="btn-main">إرسال عبر الواتساب</button>
+            <input type="text" id="userName" placeholder="الاسم الكامل" class="nike-input" required>
+            <input type="email" id="userEmail" placeholder="البريد الإلكتروني" class="nike-input" required>
+            <textarea id="userMsg" placeholder="رسالتك أو استفسارك..." class="nike-input" style="height: 180px; resize: none;" required></textarea>
+            <button type="submit" class="btn-primary">إرسال عبر الواتساب <i class="fab fa-whatsapp" style="margin-right:10px"></i></button>
         </form>
+    </div>
+    
+    <div style="margin-top: 50px; display: flex; justify-content: center; gap: 40px; color: var(--text-dim);">
+        <div><i class="fas fa-phone" style="color:var(--primary)"></i> 0603852896</div>
+        <div><i class="fas fa-envelope" style="color:var(--primary)"></i> hamzakhalyfah223@gmail.com</div>
     </div>
 </section>
 
@@ -39,7 +45,7 @@
         e.preventDefault();
         const name = document.getElementById('userName').value;
         const msg = document.getElementById('userMsg').value;
-        const text = `*رسالة تواصل من الموقع*%0A%0A*الاسم:* ${name}%0A*الرسالة:* ${msg}`;
+        const text = `*رسالة تواصل جديدة من الموقع*%0A%0A*الاسم:* ${name}%0A*الرسالة:* ${msg}`;
         window.open(`https://wa.me/212603852896?text=${text}`, '_blank');
     });
 </script>
