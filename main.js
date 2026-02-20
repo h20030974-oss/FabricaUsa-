@@ -13,27 +13,7 @@ let cart=[], currentProduct=null, currentQty=1;
 
 // ================= INIT =================
 function init(){
-    renderFeatured();
     renderShop();
-}
-
-// ================= RENDER BEST SELLER =================
-function renderFeatured(){
-    const container=document.getElementById('featuredProducts');
-    if(!container) return;
-    const featured=products.filter(p=>p.featured);
-    container.innerHTML=featured.map(p=>`
-        <div class="product-card" onclick="openModal(${p.id})">
-            <div class="img-box">
-                <span class="badge">🔥 Best Seller</span>
-                <img src="${p.img}" alt="${p.name}">
-            </div>
-            <div class="product-info">
-                <h3>${p.name}</h3>
-                <p class="price">${p.price} MAD</p>
-            </div>
-        </div>
-    `).join('');
 }
 
 // ================= RENDER SHOP =================
