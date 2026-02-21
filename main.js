@@ -9,7 +9,7 @@ const products = [
     { id: 2, name: "Creatine Monohydrate", price: 250, category: "Creatine", img: "https://images.unsplash.com/photo-1594400202073-77d34bc65ee8?w=800", desc: "كرياتين نقي 100% لزيادة القوة البدنية والتحمل في التمرين." },
     { id: 3, name: "Casein Night Protein", price: 950, category: "Protein", img: "https://images.unsplash.com/photo-1617649387527-75ad0df5ec4c?w=800", desc: "بروتين بطيء الامتصاص يحمي عضلاتك طوال الليل لمدة 8 ساعات." },
     { id: 4, name: "Vapor X5 Pre-Workout", price: 600, category: "Energy", img: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800", desc: "طاقة انفجارية وتركيز حاد لكسر أرقامك القياسية في النادي." },
-    { id: 5, name: "Rule 1 Whey Blend", price: 850, category: "Protein", img: "https://images.unsplash.com/photo-1617649387550-79a69e3d6b49?w=800", desc: "مزيج عالي الجودة من البروتين المعزول والمركز لنتائج مثالية." },
+    { id: 5, name: "Rule 1 Whey Blend", price: 850, category: "Protein", img: "https://image2url.com/r2/default/images/1771658902571-b1ea9126-91f3-4771-9253-9965ae9c8456.jpeg", desc: "مزيج عالي الجودة من البروتين المعزول والمركز لنتائج مثالية." },
     { id: 6, name: "BCAA Amino Performance", price: 450, category: "Amino", img: "https://images.unsplash.com/photo-1593095191071-82b0fdf983a1?w=800", desc: "أحماض أمينية لسرعة الاستشفاء العضلي ومنع الإرهاق أثناء التدريب." }
 ];
 
