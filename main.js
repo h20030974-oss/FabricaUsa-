@@ -1,16 +1,66 @@
 /* 
    LA FABRICAUSA - SUPREME ENGINE
-   Logic: 6 Products / Cart System / Category Filter / WhatsApp API
+   Logic: 7 Products / Cart System / Category Filter / WhatsApp API
 */
 
-// 1. قاعدة البيانات (المنتجات الستة كاملة)
+// 1. قاعدة البيانات (المنتجات السبعة)
 const products = [
-    { id: 1, name: "ISO100 Hydrolyzed", price: 1300, category: "Protein", img: "https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=800", desc: "أقوى بروتين هيدروليزيد لبناء العضلات الصافية وسرعة الاستشفاء." },
-    { id: 2, name: "Creatine Monohydrate", price: 250, category: "Creatine", img: "https://images.unsplash.com/photo-1594400202073-77d34bc65ee8?w=800", desc: "كرياتين نقي 100% لزيادة القوة البدنية والتحمل في التمرين." },
-    { id: 3, name: "Casein Night Protein", price: 950, category: "Protein", img: "https://images.unsplash.com/photo-1617649387527-75ad0df5ec4c?w=800", desc: "بروتين بطيء الامتصاص يحمي عضلاتك طوال الليل لمدة 8 ساعات." },
-    { id: 4, name: "Vapor X5 Pre-Workout", price: 600, category: "Energy", img: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800", desc: "طاقة انفجارية وتركيز حاد لكسر أرقامك القياسية في النادي." },
-    { id: 5, name: "Rule 1 Whey Blend", price: 850, category: "Protein", img: "https://image2url.com/r2/default/images/1771658902571-b1ea9126-91f3-4771-9253-9965ae9c8456.jpeg", desc: "مزيج عالي الجودة من البروتين المعزول والمركز لنتائج مثالية." },
-    { id: 6, name: "BCAA Amino Performance", price: 450, category: "Amino", img: "https://images.unsplash.com/photo-1593095191071-82b0fdf983a1?w=800", desc: "أحماض أمينية لسرعة الاستشفاء العضلي ومنع الإرهاق أثناء التدريب." }
+    { 
+        id: 1, 
+        name: "ISO100 Hydrolyzed", 
+        price: 1300, 
+        category: "Protein", 
+        img: "https://image2url.com/r2/default/images/1771659774036-46d8901f-d788-4054-9cb8-5a720026330e.png", 
+        desc: "أقوى بروتين هيدروليزيد لبناء العضلات الصافية وسرعة الاستشفاء." 
+    },
+    { 
+        id: 2, 
+        name: "Creatine Monohydrate", 
+        price: 250, 
+        category: "Creatine", 
+        img: "https://images.unsplash.com/photo-1594400202073-77d34bc65ee8?w=800", 
+        desc: "كرياتين نقي 100% لزيادة القوة البدنية والتحمل في التمرين." 
+    },
+    { 
+        id: 3, 
+        name: "Casein Night Protein", 
+        price: 950, 
+        category: "Protein", 
+        img: "https://image2url.com/r2/default/images/1771659695650-8aa117c9-4ef9-4ef8-a813-128fac0b8ee7.png", 
+        desc: "بروتين بطيء الامتصاص يحمي عضلاتك طوال الليل لمدة 8 ساعات." 
+    },
+    { 
+        id: 4, 
+        name: "Vapor X5 Pre-Workout", 
+        price: 600, 
+        category: "Energy", 
+        img: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800", 
+        desc: "طاقة انفجارية وتركيز حاد لكسر أرقامك القياسية في النادي." 
+    },
+    { 
+        id: 5, 
+        name: "Rule 1 Whey Blend", 
+        price: 850, 
+        category: "Protein", 
+        img: "https://image2url.com/r2/default/images/1771659519615-a56c247e-4fd9-4e63-87ad-cc424d32600f.png", 
+        desc: "مزيج عالي الجودة من البروتين المعزول والمركز لنتائج مثالية."
+    },
+    { 
+        id: 6, 
+        name: "BCAA Amino Performance", 
+        price: 450, 
+        category: "Amino", 
+        img: "https://images.unsplash.com/photo-1593095191071-82b0fdf983a1?w=800", 
+        desc: "أحماض أمينية لسرعة الاستشفاء العضلي ومنع الإرهاق أثناء التدريب." 
+    },
+    { 
+        id: 7, 
+        name: "Pre-Workout Power Boost", 
+        price: 400, 
+        category: "Pre-Workout", 
+        img: "https://image2url.com/r2/default/images/1771659898335-446472d8-8988-4fa1-87d1-aee1c7282eeb.png", 
+        desc: "مكمل قبل التمرين يمنحك طاقة قوية وتركيز عالي، يساعد على زيادة القوة والتحمل وتحسين الأداء خلال الحصص المكثفة."
+    }
 ];
 
 // 2. حالة المتجر
