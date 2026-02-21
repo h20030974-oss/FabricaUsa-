@@ -7,7 +7,7 @@
 const products = [
     { 
         id: 1, 
-        name: "ISO100", 
+        name: "Protein ISO100", 
         price: 1300, 
         category: "Protein", 
         img: "https://image2url.com/r2/default/images/1771659774036-46d8901f-d788-4054-9cb8-5a720026330e.png", 
@@ -18,7 +18,7 @@ const products = [
         name: "Creatine Monohydrate", 
         price: 250, 
         category: "Creatine", 
-        img: "https://images.unsplash.com/photo-1594400202073-77d34bc65ee8?w=800", 
+        img: "https://image2url.com/r2/default/images/1771682254023-a5faf561-9ece-472c-96ec-90152a9ab76f.png", 
         desc: "كرياتين نقي 100% لزيادة القوة البدنية والتحمل في التمرين." 
     },
     { 
@@ -58,7 +58,7 @@ const products = [
         name: "Pre-Workout Power Boost", 
         price: 400, 
         category: "Pre-Workout", 
-        img: "https://image2url.com/r2/default/images/1771659898335-446472d8-8988-4fa1-87d1-aee1c7282eeb.png", 
+        img: "https://image2url.com/r2/default/images/1771682482293-7aafd962-4421-46fc-8bf8-e791d9cbeefb.png", 
         desc: "مكمل قبل التمرين يمنحك طاقة قوية وتركيز عالي، يساعد على زيادة القوة والتحمل وتحسين الأداء خلال الحصص المكثفة."
     }
 ];
