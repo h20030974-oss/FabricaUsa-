@@ -7,7 +7,7 @@
 const products = [
     { 
         id: 1, 
-        name: "ISO100 Hydrolyzed", 
+        name: "ISO100", 
         price: 1300, 
         category: "Protein", 
         img: "https://image2url.com/r2/default/images/1771659774036-46d8901f-d788-4054-9cb8-5a720026330e.png", 
