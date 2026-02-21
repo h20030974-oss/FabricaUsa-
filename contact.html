@@ -2,8 +2,10 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تواصل معنا | La FabricaUsa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>تواصل معنا | La FabricaUsa Support</title>
+    
+    <!-- الأيقونات والخطوط -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,61 +20,68 @@
             <li><a href="about.html">قصتنا</a></li>
             <li><a href="contact.html" class="active">تواصل معنا</a></li>
         </ul>
-        <div class="nav-right" onclick="toggleCart(true)" style="cursor:pointer">
-            <div class="cart-btn"><i class="fas fa-shopping-bag"></i><span id="cartCount">0</span></div>
+        <div class="nav-right">
+            <div class="cart-btn" onclick="toggleCart(true)">
+                <i class="fas fa-shopping-bag"></i><span id="cartCount">0</span>
+            </div>
         </div>
     </div>
 </nav>
 
 <section class="nav-container" style="padding: 100px 20px; max-width: 800px; text-align: center;">
-    <h1 style="font-family: 'Oswald'; font-style: italic; font-size: 50px; margin-bottom: 20px;">GET IN TOUCH.</h1>
-    <p style="color: var(--text-dim); margin-bottom: 50px; font-size: 18px;">فريق الخبراء لدينا متاح دائماً للإجابة على استفساراتك الفنية حول المكملات والطلبات.</p>
+    <h1 style="font-family: 'Oswald'; font-style: italic; font-size: 50px; margin-bottom: 20px; color: var(--primary);">GET IN TOUCH.</h1>
+    <p style="color: var(--text-dim); margin-bottom: 50px; font-size: 18px;">هل لديك استفسار حول مكمل معين أو حالة طلبك؟ نحن هنا للمساعدة.</p>
 
+    <!-- نموذج التواصل الاحترافي -->
     <div style="background: var(--card); padding: 50px; border-radius: 40px; border: 1px solid #1a1a1a; box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
         <form id="contactForm">
             <input type="text" id="userName" placeholder="الاسم الكامل" class="nike-input" required>
             <input type="email" id="userEmail" placeholder="البريد الإلكتروني" class="nike-input" required>
-            <textarea id="userMsg" placeholder="رسالتك أو استفسارك..." class="nike-input" style="height: 180px; resize: none;" required></textarea>
-            <button type="submit" class="btn-nike">إرسال عبر الواتساب <i class="fab fa-whatsapp" style="margin-right:10px"></i></button>
+            <textarea id="userMsg" placeholder="كيف يمكننا مساعدتك؟ اكتب رسالتك هنا..." class="nike-input" style="height: 180px; resize: none;" required></textarea>
+            <button type="submit" class="btn-nike">إرسال عبر واتساب <i class="fab fa-whatsapp" style="margin-right:10px"></i></button>
         </form>
     </div>
     
+    <!-- معلومات الدعم الإضافية -->
     <div style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; color: var(--text-dim);">
-        <div style="background:#0a0a0a; padding:20px; border-radius:20px">
-            <i class="fas fa-phone" style="color:var(--primary); font-size:24px; margin-bottom:10px"></i>
-            <p>0603852896</p>
+        <div style="background:#0a0a0a; padding:30px; border-radius:20px; border: 1px solid #111;">
+            <i class="fas fa-phone" style="color:var(--primary); font-size:24px; margin-bottom:15px"></i>
+            <p style="color:#fff; font-weight:bold">0603852896</p>
+            <span style="font-size:12px">متاحون من 9 صباحاً - 9 مساءً</span>
         </div>
-        <div style="background:#0a0a0a; padding:20px; border-radius:20px">
-            <i class="fas fa-envelope" style="color:var(--primary); font-size:24px; margin-bottom:10px"></i>
-            <p style="font-size:14px">hamzakhalyfah223@gmail.com</p>
+        <div style="background:#0a0a0a; padding:30px; border-radius:20px; border: 1px solid #111;">
+            <i class="fas fa-envelope" style="color:var(--primary); font-size:24px; margin-bottom:15px"></i>
+            <p style="color:#fff; font-weight:bold; font-size:13px">hamzakhalyfah223@gmail.com</p>
+            <span style="font-size:12px">نرد عادةً خلال أقل من ساعتين</span>
         </div>
     </div>
 </section>
 
-<!-- السلة الجانبية ضرورية -->
+<!-- السلة الجانبية -->
 <div id="cartDrawer" class="cart-drawer">
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px">
-        <h2>سلة التسوق</h2><i class="fas fa-times" onclick="toggleCart(false)" style="cursor:pointer; font-size:24px"></i>
+        <h2>سلة التسوق</h2><i class="fas fa-times" onclick="toggleCart(false)" style="cursor:pointer; font-size:24px; color:var(--text-dim)"></i>
     </div>
     <div id="cartItems" style="flex:1; overflow-y:auto"></div>
     <div style="border-top:1px solid #1a1a1a; padding-top:25px">
         <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-weight:800; font-size:20px">
             <span>المجموع:</span><span id="cartTotal">0 MAD</span>
         </div>
-        <button class="btn-nike" onclick="sendOrder()">تأكيد الطلب</button>
+        <button class="btn-nike" onclick="sendOrder()">تأكيد المشتريات</button>
     </div>
 </div>
 
+<!-- معالجة إرسال فورم التواصل -->
 <script>
-    // برمجة إرسال فورم التواصل
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
         const name = document.getElementById('userName').value;
         const msg = document.getElementById('userMsg').value;
-        const finalMsg = `*رسالة تواصل جديدة من الموقع*%0A%0A*الاسم:* ${name}%0A*الرسالة:* ${msg}`;
-        window.open(`https://wa.me/212603852896?text=${finalMsg}`, '_blank');
+        const text = `*رسالة تواصل جديدة من الموقع*%0A%0A👤 *الاسم:* ${name}%0A✉️ *الرسالة:* ${msg}`;
+        window.open(`https://wa.me/212603852896?text=${text}`, '_blank');
     });
 </script>
+
 <script src="main.js"></script>
 </body>
 </html>

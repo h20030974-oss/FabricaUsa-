@@ -25,8 +25,8 @@
 
         <div class="nav-right">
             <div class="search-box">
-                <i class="fas fa-search" style="color: #444;"></i>
-                <input type="text" id="searchInput" placeholder="بحث...">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="بحث عن مكمل...">
             </div>
             <div class="cart-btn" onclick="toggleCart(true)">
                 <i class="fas fa-shopping-bag"></i>
@@ -36,15 +36,26 @@
     </div>
 </nav>
 
-<!-- هيدر المتجر (Spacious Header) -->
-<section class="nav-container" style="padding: 80px 20px 40px; text-align: center;">
-    <h1 style="font-family: 'Oswald'; font-style: italic; font-size: clamp(40px, 8vw, 80px); color: var(--primary); margin-bottom: 10px;">ALL GEAR.</h1>
-    <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto; font-size: 16px; text-transform: uppercase; letter-spacing: 2px;">نخبة المكملات الغذائية العالمية بين يديك</p>
+<!-- هيدر المتجر الاحترافي -->
+<section class="nav-container" style="padding: 60px 20px 20px;">
+    <h1 style="font-family: 'Oswald'; font-style: italic; font-size: clamp(40px, 8vw, 70px); color: var(--primary); margin-bottom: 5px;">ALL GEAR.</h1>
+    <p style="color: var(--text-dim); max-width: 600px; font-size: 16px; text-transform: uppercase; letter-spacing: 2px;">مجموعتنا الكاملة من وقود المحترفين</p>
+</section>
+
+<!-- نظام فلاتر الفئات (Category Chips) -->
+<section class="nav-container">
+    <div class="filter-container">
+        <div class="chip active" onclick="filterCategory('all', this)">الكل</div>
+        <div class="chip" onclick="filterCategory('Protein', this)">بروتين</div>
+        <div class="chip" onclick="filterCategory('Creatine', this)">كرياتين</div>
+        <div class="chip" onclick="filterCategory('Energy', this)">طاقة</div>
+        <div class="chip" onclick="filterCategory('Amino', this)">أمينو</div>
+    </div>
 </section>
 
 <!-- شبكة المنتجات الستة الكاملة -->
-<div id="productsGrid" class="products-grid" style="margin-bottom: 100px;">
-    <!-- يتم ملؤها بواسطة main.js -->
+<div id="productsGrid" class="products-grid" style="margin-bottom: 80px;">
+    <!-- سيتم ملؤها تلقائياً بواسطة main.js -->
 </div>
 
 <!-- الفوتر (Footer) -->
@@ -52,59 +63,69 @@
     <div class="footer-grid">
         <div class="footer-brand">
             <h2>LA FABRICA<span>USA</span></h2>
-            <p>نحن نوفر الوقود الذي تحتاجه لتحطيم أرقامك القياسية. جودة أصلية 100%.</p>
+            <p>نحن نوفر الأداء والنتائج. مكملات غذائية عالمية تم اختيارها لخدمة أهدافك.</p>
             <div style="display: flex; gap: 20px; margin-top: 20px;">
-                <a href="https://www.instagram.com/lafabricausa?igsh=dThtemowdTJobzh6" target="_blank" style="color: var(--primary); font-size: 24px;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/lafabricausa?igsh=dThtemowdTJobzh6" target="_blank" style="color: var(--primary); font-size: 24px;">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
         <div class="footer-contact">
-            <h3 style="color: var(--accent); margin-bottom: 20px;">الدعم</h3>
-            <p>hamzakhalyfah223@gmail.com</p>
-            <p>0603852896</p>
+            <h3 style="color: var(--accent); margin-bottom: 20px;">روابط سريعة</h3>
+            <p><a href="index.html" style="color:#ccc; text-decoration:none">الرئيسية</a></p>
+            <p><a href="about.html" style="color:#ccc; text-decoration:none">قصتنا</a></p>
+            <p><a href="contact.html" style="color:#ccc; text-decoration:none">تواصل معنا</a></p>
         </div>
     </div>
 </footer>
 
-<!-- سلة التسوق الجانبية (نفس الكود لضمان الربط) -->
+<!-- سلة التسوق الجانبية (Cart Drawer) -->
 <div id="cartDrawer" class="cart-drawer">
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px">
-        <h2 style="font-size: 22px;">سلة التسوق</h2>
+        <h2 style="font-size: 24px;">سلة المشتريات</h2>
         <i class="fas fa-times" onclick="toggleCart(false)" style="cursor:pointer; font-size:24px; color:var(--text-dim)"></i>
     </div>
-    <div id="cartItems" style="flex:1; overflow-y:auto"></div>
+    <div id="cartItems" style="flex:1; overflow-y:auto">
+        <!-- المنتجات المضافة تظهر هنا -->
+    </div>
     <div style="border-top:1px solid #1a1a1a; padding-top:25px">
         <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-weight:800; font-size:20px">
-            <span>المجموع:</span><span id="cartTotal" style="color:var(--accent)">0 MAD</span>
+            <span>المجموع:</span>
+            <span id="cartTotal" style="color:var(--accent)">0 MAD</span>
         </div>
         <input type="text" id="custName" placeholder="الاسم الكامل" class="nike-input">
         <input type="text" id="custCity" placeholder="المدينة" class="nike-input">
-        <button class="btn-nike" onclick="sendOrder()">تأكيد الطلب (واتساب)</button>
+        <button class="btn-nike" onclick="sendOrder()">إرسال الطلب عبر واتساب</button>
     </div>
 </div>
 
-<!-- المودال (نفس الكود لفتح تفاصيل المنتجات) -->
+<!-- نافذة المنتج (Modal) -->
 <div id="productModal" class="modal">
     <div class="modal-content">
-        <span style="position:absolute; top:30px; right:30px; cursor:pointer; font-size:35px; color:var(--text-dim)" onclick="closeModal()">&times;</span>
+        <span style="position:absolute; top:30px; right:30px; cursor:pointer; font-size:35px; color:var(--text-dim); z-index:100" onclick="closeModal()">&times;</span>
         <div style="background:#161616; border-radius:30px; display:flex; align-items:center; justify-content:center">
-            <img id="m-img" src="" style="width:80%; filter:drop-shadow(0 20px 40px #000)">
+            <img id="m-img" src="" style="width:85%; filter:drop-shadow(0 20px 40px #000)">
         </div>
         <div>
-            <h2 id="m-name" style="font-size:35px;"></h2>
-            <p id="m-price" class="price" style="font-size:30px; margin:20px 0"></p>
-            <p id="m-desc" style="color:var(--text-dim); margin-bottom:25px;"></p>
-            <div class="qty-controls">
-                <button class="qty-btn" onclick="updateQty(-1)">-</button>
+            <h2 id="m-name" style="font-size:38px; line-height:1"></h2>
+            <p id="m-price" class="price" style="font-size:35px; margin:20px 0"></p>
+            <p id="m-desc" style="color:var(--text-dim); margin-bottom:30px; font-size:16px"></p>
+            
+            <div style="display:flex; align-items:center; gap:20px; margin-bottom:30px">
+                <button onclick="updateQty(-1)" class="qty-btn">-</button>
                 <span id="modalQty" style="font-size:22px; font-weight:900; width:30px; text-align:center">1</span>
-                <button class="qty-btn" onclick="updateQty(1)">+</button>
+                <button onclick="updateQty(1)" class="qty-btn">+</button>
             </div>
+            
             <button class="btn-nike" onclick="addToCart()">أضف للسلة</button>
         </div>
     </div>
 </div>
 
 <!-- أيقونة واتساب العائمة -->
-<a href="https://wa.me/212603852896" class="whatsapp-float" target="_blank" style="text-decoration: none;"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/212603852896" class="whatsapp-float" target="_blank" style="text-decoration: none;">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 <script src="main.js"></script>
 </body>
