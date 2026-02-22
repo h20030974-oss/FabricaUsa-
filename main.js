@@ -74,7 +74,7 @@ const products = [
         name: "BIOTECH USA Iso Whey Zero 1.8kg", 
         price: 549, 
         category: "Energy", 
-        img: "https://image2url.com/r2/default/images/1771739794730-38d09181-0d31-41bf-9bf8-c9e415b5fe6e.webp", 
+        img: "https://image2url.com/r2/default/images/1771742032948-a6720458-3152-4892-acaf-4c7e256e4d8e.jpg", 
         desc: "مكمل غذائي قبل التمرين لدعم الطاقة والتركيز والأداء. تحتوي على 175mg كافيين، 3.4g كرياتين مونوهيدرات، و250mg PerforMelon، بوزن 330g (30 حصة)." 
     },
     { 
