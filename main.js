@@ -31,11 +31,11 @@ const products = [
     },
     { 
         id: 4, 
-        name: "Vapor X5 Pre-Workout", 
-        price: 600, 
-        category: "Energy", 
-        img: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800", 
-        desc: "طاقة انفجارية وتركيز حاد لكسر أرقامك القياسية في النادي." 
+        name: "BIOTECH USA Iso Whey Zero 1.8kg", 
+        price: 1049, 
+        category: "Protein", 
+        img: "https://image2url.com/r2/default/images/1771740313674-c8c7ce97-dce4-4f7f-978f-0c82e601735a.webp", 
+        desc: "هو بروتين مصل حليب معزول عالي النقاء (Whey Isolate)، مصمم لتوفير أعلى نسبة بروتين بأقل كمية من الدهون واللاكتوز." 
     },
     { 
         id: 5, 
@@ -55,6 +55,22 @@ const products = [
     },
     { 
         id: 7, 
+        name: "Créatine Monohydrate Biotech USA 500g", 
+        price: 349, 
+        category: "Créatine", 
+        img: "https://image2url.com/r2/default/images/1771739217309-7de4e486-cb92-4770-a27e-f2109ebf6865.webp", 
+        desc: "مكمل كرياتين مونوهيدرات نقي 100% بدون نكهة." 
+    },
+    { 
+        id: 8, 
+        name: "V-bulk preminum USA 2,72 kg Victor Martinez", 
+        price: 539, 
+        category: "Protein", 
+        img: "https://image2url.com/r2/default/images/1771739794730-38d09181-0d31-41bf-9bf8-c9e415b5fe6e.webp", 
+        desc: "ماس جينر عالي السعرات مخصص لزيادة الوزن والكتلة العضلية بسرعة." 
+    },
+    { 
+        id: 9, 
         name: "Pre-Workout Power Boost", 
         price: 400, 
         category: "Pre-Workout", 
